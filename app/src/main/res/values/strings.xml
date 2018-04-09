@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EdittextUX</string>
+    <string name="confirm">确认</string>
+    <string name="inputting">正在输入...</string>
+</resources>
