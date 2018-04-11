@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context="com.abt.edittextux.MainActivity">
 
-    <EditText
+    <com.abt.edittextux.SecurityEditText
         android:id="@+id/live_title_detail"
         android:layout_width="@dimen/dp_225"
         android:layout_height="@dimen/dp_62"
@@ -16,7 +16,7 @@
         android:hint="@string/inputting"
         android:imeActionLabel="@string/confirm"
         android:imeOptions="actionDone"
-        android:inputType="textMultiLine"
+        android:inputType="text"
         android:paddingLeft="@dimen/dp_8"
         android:paddingRight="@dimen/dp_8"
         android:paddingTop="@dimen/dp_5"
