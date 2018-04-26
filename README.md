@@ -25,3 +25,8 @@ actionSend ： Send
 actionNext ： Next  
 actionDone ： Done，隐藏软键盘，即使不是最后一个文本输入框   
 
+## EditText多行内容滑动惯性       
+TODO        
+   
+   
+    
