@@ -6,26 +6,88 @@
     android:orientation="vertical"
     android:gravity="center_horizontal" >
 
+    <ScrollView
+        android:id="@+id/ScrollView2"
+        android:layout_width="@dimen/dp_225"
+        android:layout_height="@dimen/dp_65"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/et_advice_content"
+                android:layout_width="fill_parent"
+                android:layout_height="190px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="7dp"
+                android:layout_span="10000"
+                android:scrollbars="vertical"
+                android:gravity="top|left"
+                android:textSize="13sp" >
+            </EditText>
+        </TableRow>
+    </ScrollView>
+
+    <com.abt.edittextux.CustomScrollView
+        android:id="@+id/ScrollView"
+        android:background="@drawable/edit_text_bg_normal"
+        android:scrollbars="none"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_width="@dimen/dp_225"
+        android:layout_height="@dimen/dp_62">
+
+        <TableRow
+            android:id="@+id/TableRowContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.abt.edittextux.CustomEditText
+                android:id="@+id/edit_multi_line"
+                android:layout_width="@dimen/dp_225"
+                android:layout_height="@dimen/dp_62"
+                android:background="@null"
+                android:padding="@dimen/dp_5"
+                android:hint="@string/multi_line_edit_text"
+                android:gravity="top"
+                android:scrollbars="vertical"
+                android:inputType="text"
+                android:imeOptions="actionDone" />
+        </TableRow>
+    </com.abt.edittextux.CustomScrollView>
+
     <EditText
         android:id="@+id/edit_single_line"
         android:layout_width="@dimen/dp_225"
         android:layout_height="@dimen/dp_62"
-        android:layout_marginTop="@dimen/dp_100"
+        android:layout_marginTop="@dimen/dp_50"
         android:padding="@dimen/dp_5"
         android:background="@drawable/edit_text_bg_normal"
         android:hint="@string/single_line_edit_text"
         android:inputType="text"
         android:singleLine="true"
+        android:scrollbars="vertical"
         android:imeOptions="actionDone" />
 
     <EditText
-        android:id="@+id/edit_multi_line"
+        android:id="@+id/edit_multi_line_normal"
         android:layout_width="@dimen/dp_225"
         android:layout_height="@dimen/dp_62"
         android:layout_marginTop="@dimen/dp_50"
         android:padding="@dimen/dp_5"
         android:background="@drawable/edit_text_bg_normal"
         android:hint="@string/multi_line_edit_text"
+        android:gravity="top"
+        android:scrollbars="vertical"
+        android:overScrollMode="always"
         android:inputType="text"
         android:imeOptions="actionDone" />
 

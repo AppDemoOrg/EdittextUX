@@ -2,6 +2,7 @@ package com.abt.edittextux;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -21,13 +22,22 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
         setContentView(R.layout.activity_main);
         Logger.d(TAG, "onCreate"); // print only the first param.
 
-        final EditText singleLineEdit = findViewById(R.id.edit_single_line);
-        singleLineEdit.setText(getResources().getString(R.string.single_line_edit_text));
-        Logger.d("setText = "+getResources().getString(R.string.single_line_edit_text));
+        final EditText multiLineEditA = findViewById(R.id.et_advice_content);
+        multiLineEditA.setHorizontallyScrolling(false);
+        multiLineEditA.setMaxLines(Integer.MAX_VALUE);
 
         final EditText multiLineEdit = findViewById(R.id.edit_multi_line);
         multiLineEdit.setHorizontallyScrolling(false);
         multiLineEdit.setMaxLines(Integer.MAX_VALUE);
+        multiLineEdit.setMovementMethod(ScrollingMovementMethod.getInstance());
+
+        final EditText singleLineEdit = findViewById(R.id.edit_single_line);
+        singleLineEdit.setText(getResources().getString(R.string.single_line_edit_text));
+        Logger.d("setText = "+getResources().getString(R.string.single_line_edit_text));
+
+        final EditText multiLineEditNormal = findViewById(R.id.edit_multi_line_normal);
+        multiLineEditNormal.setHorizontallyScrolling(false);
+        multiLineEditNormal.setMaxLines(Integer.MAX_VALUE);
         Logger.i("setMaxLines = "+Integer.MAX_VALUE);
     }
 
